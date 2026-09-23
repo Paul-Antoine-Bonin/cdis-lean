@@ -3,3 +3,5 @@ import CdisLean.Bridges.ChapterI
 import CdisLean.Bridges.ChapterII
 import CdisLean.Bridges.ChapterIII
 import CdisLean.Bridges.ChapterIV
+import CdisLean.ChapterV.Inversion
+import CdisLean.ChapterV.Rejection
