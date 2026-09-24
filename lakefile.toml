@@ -19,3 +19,6 @@ name = "CdisLean"
 
 [[lean_lib]]
 name = "CdisLeanTest"
+
+[[lean_lib]]
+name = "Exercises"

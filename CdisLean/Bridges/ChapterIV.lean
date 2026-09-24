@@ -14,6 +14,8 @@ import Mathlib.MeasureTheory.Measure.LevyConvergence
 
 * id 62: Markov's inequality `P(|X| ≥ a) ≤ E(|X|^p) / a^p`. The course states it for `a ∈ ℝ*`,
   which is false for `a < 0` (see `not_markov_of_neg`); the correct hypothesis is `a > 0`.
+* id 63: the course's Chebyshev inequality does not quantify `a`; `not_chebyshev_of_neg`
+  shows it fails for `a < 0`.
 * id 74: strong law of large numbers, almost sure and `L¹` convergence.
 * id 79: central limit theorem in the course's normalisation `(S_n - n m) / (σ √n) → N(0,1)`.
 * id 89: characteristic function of a Gaussian vector, with mean vector and covariance.
@@ -52,6 +54,15 @@ theorem not_markov_of_neg :
   intro h
   have := h 1 (-1) (fun _ ↦ 0) le_rfl (by norm_num) (memLp_const 0)
   norm_num at this
+
+/-- CDIS P.IV, id 63: the course states Bienaymé-Chebyshev `P(|X - E X| > a) ≤ Var(X) / a²`
+without quantifying `a`; it is false for `a < 0` (take `X = 0`, `a = -1`). -/
+theorem not_chebyshev_of_neg :
+    ¬ ∀ (a : ℝ) (X : Ω → ℝ), MemLp X 2 P →
+      P.real {ω | a < |X ω - ∫ ω', X ω' ∂P|} ≤ Var[X; P] / a ^ 2 := by
+  intro h
+  have := h (-1) 0 (memLp_const 0)
+  norm_num [variance_zero] at this
 
 end Markov
 
