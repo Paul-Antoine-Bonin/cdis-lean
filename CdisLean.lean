@@ -9,3 +9,5 @@ import CdisLean.ChapterV.ImportanceSampling
 import CdisLean.ChapterV.BoxMuller
 import CdisLean.ChapterIII.ConditionalLaws
 import CdisLean.ChapterIII.Densities
+import CdisLean.ChapterII.CovarianceMatrix
+import CdisLean.ChapterIV.MultiCLT
