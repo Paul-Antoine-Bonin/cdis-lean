@@ -5,3 +5,4 @@ import CdisLean.Bridges.ChapterIII
 import CdisLean.Bridges.ChapterIV
 import CdisLean.ChapterV.Inversion
 import CdisLean.ChapterV.Rejection
+import CdisLean.ChapterV.ImportanceSampling
