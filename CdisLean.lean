@@ -11,3 +11,5 @@ import CdisLean.ChapterIII.ConditionalLaws
 import CdisLean.ChapterIII.Densities
 import CdisLean.ChapterII.CovarianceMatrix
 import CdisLean.ChapterIV.MultiCLT
+import CdisLean.ChapterI.DensityCDF
+import CdisLean.ChapterIV.Continuity

@@ -42,6 +42,8 @@ theorem dotProduct_covMatrix_mulVec [IsFiniteMeasure P] {X : ι → Ω → ℝ}
   refine Finset.sum_congr rfl fun i _ ↦ Finset.sum_congr rfl fun j _ ↦ ?_
   ring
 
+-- `Matrix.PosSemidef` itself needs `Fintype ι` through `mulVec`, so the instance stays.
+set_option linter.unusedFintypeInType false in
 /-- CDIS P.II, id 40: the covariance matrix is symmetric positive semidefinite. -/
 theorem covMatrix_posSemidef [IsFiniteMeasure P] {X : ι → Ω → ℝ} (hX : ∀ i, MemLp (X i) 2 P) :
     (covMatrix X P).PosSemidef := by
