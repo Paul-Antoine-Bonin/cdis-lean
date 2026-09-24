@@ -6,3 +6,4 @@ import CdisLean.Bridges.ChapterIV
 import CdisLean.ChapterV.Inversion
 import CdisLean.ChapterV.Rejection
 import CdisLean.ChapterV.ImportanceSampling
+import CdisLean.ChapterV.BoxMuller
