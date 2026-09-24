@@ -1,4 +1,4 @@
-name = "cdis-lean"
+name = "cdis_lean"
 version = "0.1.0"
 keywords = ["math"]
 defaultTargets = ["CdisLean"]
